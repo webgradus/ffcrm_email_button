@@ -6,7 +6,7 @@ source "https://rubygems.org"
 gemspec
 
 # jquery-rails is used by the dummy application
-gem "jquery-rails"
+gem "jquery-rails", '~> 2.1.4'
 gem 'fat_free_crm', :git => 'git://github.com/fatfreecrm/fat_free_crm.git'
 
 # Declare any dependencies that are still in development here instead of in
