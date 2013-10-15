@@ -1,0 +1,11 @@
+:javascript
+  document.observe('dom:loaded', function() {
+    $A($$(".email-button")).each(function(name, index) {
+      $(name).observe('click', function() {
+        var recipient = $(this).readAttribute('data-email');
+        $('email-modal').select("input#recipient[type='hidden']")[0].writeAttribute('value', recipient);
+        Modalbox.show($('email-modal'), {title: "Send email", width: 600});
+        return false;
+      });
+    });
+  });

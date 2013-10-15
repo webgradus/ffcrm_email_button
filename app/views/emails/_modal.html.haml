@@ -1,0 +1,12 @@
+#email-modal{ hidden }
+  = form_tag emails_path, :remote => true do
+    = label_tag "Subject"
+    %br
+    = text_field_tag 'subject'
+    %br
+    = label_tag "Message"
+    %br
+    = hidden_field_tag 'recipient'
+    = text_area_tag 'message', nil, :rows => 6, :cols => 40
+    %br
+    = submit_tag 'Send'

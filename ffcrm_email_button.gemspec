@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "ffcrm_sendgrid/version"
+require "ffcrm_email_button/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "ffcrm_sendgrid"
-  s.version     = FfcrmSendgrid::VERSION
+  s.name        = "ffcrm_email_button"
+  s.version     = FfcrmEmailButton::VERSION
   s.authors     = ["PitOn"]
   s.email       = ["garik.piton@gmail.com"]
   s.homepage    = "https://github.com/webgradus/ffcrm_sendgrid"
-  s.summary     = "Integration of FatFreeCRM with SendGrid email service"
-  s.description = "Integration of FatFreeCRM with SendGrid email service"
+  s.summary     = "Replaces 'Email' field on Contact Sidebar with 'Email' button showing email sending modal"
+  s.description = "Replaces 'Email' field on Contact Sidebar with 'Email' button showing email sending modal"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
