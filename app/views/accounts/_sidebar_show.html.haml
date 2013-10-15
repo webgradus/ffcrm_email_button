@@ -2,6 +2,7 @@
 - lost = @account.opportunities.lost.map(&:amount).compact.sum
 - pipeline = @account.opportunities.pipeline.map(&:weighted_amount).compact.sum
 
+= render 'emails/modal'
 .panel#summary
   %h4= h(@account.name)
   - if @account.website
