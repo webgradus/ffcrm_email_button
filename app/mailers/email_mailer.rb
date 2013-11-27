@@ -5,6 +5,6 @@ class EmailMailer < ActionMailer::Base
     @recipient = recipient
     @message  = message
     @sender = sender
-    mail(to: @recipient, subject: subject)
+    mail(from: @sender.email, to: @recipient, subject: subject)
   end
 end
