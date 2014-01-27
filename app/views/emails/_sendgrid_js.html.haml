@@ -3,7 +3,11 @@
     $A($$(".email-button")).each(function(name, index) {
       $(name).observe('click', function() {
         var recipient = $(this).readAttribute('data-email');
+        var recipient_id = $(this).readAttribute('data-id');
+        var recipient_type = $(this).readAttribute('data-type');
         $('email-modal').select("input#recipient[type='hidden']")[0].writeAttribute('value', recipient);
+        $('email-modal').select("input#recipient_id[type='hidden']")[0].writeAttribute('value', recipient_id);
+        $('email-modal').select("input#recipient_type[type='hidden']")[0].writeAttribute('value', recipient_type);
         Modalbox.show($('email-modal'), {title: "Send email", width: 600});
         return false;
       });
