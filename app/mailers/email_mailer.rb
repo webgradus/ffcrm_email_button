@@ -4,7 +4,7 @@ class EmailMailer < ActionMailer::Base
   def email(sender, recipient, subject, message)
     @recipient = recipient
     @message  = message
-    @sender = sender
-    mail(from: @sender.email, to: @recipient, subject: subject)
+    @sender = sender.full_name + " <" + sender.username + "@daqe.com>"
+    mail(from: @sender, to: @recipient, subject: subject)
   end
 end
